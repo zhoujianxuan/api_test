@@ -1,0 +1,42 @@
+info:
+  contact: {}
+  description: Go 语言编写
+  title: 结合算法题的一套api接口
+  version: "1.0"
+paths:
+  /api/no1796:
+    post:
+      description: 给你一个混合字符串 s ，请你返回 s 中 第二大 的数字，如果不存在第二大的数字，请你返回 -1 。混合字符串 由小写英文字母和数字组成。
+      parameters:
+      - description: 混合字符串 s
+        in: formData
+        name: s
+        required: true
+        type: string
+      produces:
+      - application/json
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: 1796. 字符串中第二大的数字
+      tags:
+      - version
+  /api/version:
+    get:
+      consumes:
+      - application/json
+      description: 这是一个返回version数据并且实时的服务器时间的接口
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: 测试接口
+      tags:
+      - version
+swagger: "2.0"
